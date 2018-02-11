@@ -93,7 +93,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     
     //Write the didFailWithError method here:
-    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        cityLabel.text = "Location Unavailable"
+    }
     
     
 
